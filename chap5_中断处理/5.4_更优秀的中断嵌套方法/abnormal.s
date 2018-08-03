@@ -53,7 +53,7 @@ __vector_irq:
 	CHANGE_TO_SVC
 	str r14,[r13,#-0x8]!
 	ldr r14,[r0,#-0x4]
-	str r14,[r13,#-0x4]
+	str r14,[r13,#0x4]	# original: str r14,[r13,#-0x4]
 	ldr r14,[r0,#-0x8]
 	ldr r0,[r0,#-0xc]
 	stmdb r13!,{r0-r3,r14}
